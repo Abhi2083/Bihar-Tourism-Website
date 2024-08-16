@@ -22,10 +22,6 @@ ScrollTrigger.scrollerProxy(".main", {
 });
 
 
-
-
-
-
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 
@@ -88,11 +84,16 @@ tl2.to(".main",{
 
 tl2.from(".page2-left p",{
     x:"-20vw",
+    opacity: 0, 
+    duration: 2,
+    ease: "power2.out",
 })    
 
 tl2.from("#page2-vid",{
   x:"5vw",
- 
+  opacity: 0, 
+  duration: 2, 
+  ease: "power2.out",
 })
 
 
