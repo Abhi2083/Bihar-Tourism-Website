@@ -120,6 +120,19 @@ html , body {
     transform: translate(-50%,0);
     margin-top: 7vw;
 }
+#videoText {
+    position: absolute;
+    top: 19%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* optional: to add a background behind the text */
+    padding: 10px; /* optional: to add some padding */
+    display: none; /* initially hidden */
+}
 /* second page */
 
 .page2 {

@@ -152,6 +152,44 @@ tl4.to(".main",{
   backgroundColor:"#111",
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('video');
+  const videoText = document.getElementById('videoText');
+
+ 
+  const toggleText = () => {
+      setTimeout(() => {
+          videoText.style.display = 'block'; 
+      }, 2500); 
+
+      setTimeout(() => {
+          videoText.style.display = 'none'; 
+      }, 4500); 
+  };
+
+  const textInterval = setInterval(toggleText, 4000); 
+
+
+  video.addEventListener('play', () => {
+      toggleText();
+  });
+
+  video.addEventListener('ended', () => {
+      clearInterval(textInterval); 
+      videoText.style.display = 'none'; 
+  });
+
+
+  video.addEventListener('pause', () => {
+      clearInterval(textInterval);
+  });
+
+
+  if (!video.paused) {
+      toggleText();
+      setInterval(toggleText, 4000);
+  }
+});
 
 
 
